@@ -18,6 +18,8 @@ for key,value in jsonData.items():
         for vkey, vvalue in value.items():
              if vkey == 'nodes':
                  for item in vvalue:
+                     print('['+item['nodeName']+']')
+                     print('server='+item['ipAddress'])
                      jsonNode["nodeName"] = item['nodeName']
                      nodeList.append(jsonNode.copy())
                  jsonOut[vkey] = nodeList
